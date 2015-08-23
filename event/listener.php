@@ -51,7 +51,7 @@ class listener implements EventSubscriberInterface
 		$this->helper = $helper;
 		$this->template = $template;
 	}
-	
+
 	public function common_setup($event)
 	{
 		if ($this->config['gcse_cx'])
@@ -64,10 +64,10 @@ class listener implements EventSubscriberInterface
 			));
 		}
 	}
-	
+
 	public function add_config($event)
 	{
-		if($event['mode'] == 'settings')
+		if ($event['mode'] == 'settings')
 		{
 			$display_vars = $event['display_vars'];
 			$submit_key = array_search('ACP_SUBMIT_CHANGES', $display_vars['vars']);
