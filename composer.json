@@ -22,7 +22,7 @@
 		"phpbb/epv": "dev-master"
 	},
 	"extra": {
-		"display-name": "Google CSE searchbox",
+		"display-name": "Google Custom Search Engine (CSE)",
 		"soft-require": {
 			"phpbb/phpbb": ">=3.1.0-RC2,<3.2.*@dev"
 		},
