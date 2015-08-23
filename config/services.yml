@@ -1,0 +1,21 @@
+services:
+    forumhulp.gcse.listener:
+        class: forumhulp\gcse\event\listener
+        arguments:
+            - @config
+            - @request
+            - @controller.helper
+            - @template
+        tags:
+            - { name: event.listener }
+
+    forumhulp.gcse.controller:
+        class: forumhulp\gcse\controller\controller
+        arguments:
+            - @config
+            - @controller.helper
+            - @template
+            - @user
+            - @request
+            - %core.root_path%
+            - %core.php_ext%

@@ -1,0 +1,16 @@
+<!-- INCLUDE overall_header.html -->
+<div id="cse-search-results"></div>
+<script type="text/javascript">
+	function parentWidth(elem) {
+		return elem.parentElement.clientWidth -10;
+	}
+	var x = parentWidth(document.getElementById('cse-search-results'));
+
+	var googleSearchIframeName = "cse-search-results";
+	var googleSearchFormName = "cse-search-box";
+	var googleSearchDomain = "www.google.nl";
+	var googleSearchPath = "/cse";
+</script>
+<script type="text/javascript" src="http://www.google.com/afsonline/show_afs_search.js"></script>
+<script type="text/javascript">document.getElementsByName('googleSearchFrame').item(0).width = x;</script>
+<!-- INCLUDE overall_footer.html -->

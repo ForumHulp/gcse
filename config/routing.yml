@@ -1,0 +1,3 @@
+forumhulp_gcse_controller:
+    path: /gcse/{route}
+    defaults: { _controller: forumhulp.gcse.controller:display }

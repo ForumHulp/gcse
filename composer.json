@@ -1,0 +1,35 @@
+{
+	"name": "forumhulp/gcse",
+	"type": "phpbb-extension",
+	"description": "Google Custom Search Engine (CSE)",
+	"homepage": "https://forumhulp.com",
+	"version": "3.1.0",
+	"keywords": ["phpbb", "extension", "cse"],
+	"license": "GPL-2.0",
+	"authors": [
+		{
+			"name": "John Peskens",
+			"email": "info@forumhulp.com",
+			"homepage": "http://forumhulp.com",
+			"role": "Extensions Team Consultant"
+		}
+	],
+	"require": {
+		"php": ">=5.3.3",
+		"composer/installers": "~1.0"
+	},
+	"require-dev": {
+		"phpbb/epv": "dev-master"
+	},
+	"extra": {
+		"display-name": "Google CSE searchbox",
+		"soft-require": {
+			"phpbb/phpbb": ">=3.1.0-RC2,<3.2.*@dev"
+		},
+		"version-check": {
+            "host": "forumhulp.com",
+            "directory": "/ext",
+            "filename": "index.php?id=63"
+		}
+	}
+}
