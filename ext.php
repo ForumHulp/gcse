@@ -17,9 +17,13 @@ class ext extends \phpbb\extension\base
 		switch ($old_state)
 		{
 			case '': // Empty means nothing has run yet
-				global $user;
-				$user->add_lang_ext('forumhulp/gcse', 'info_acp_gcse');
-				$user->lang['EXTENSION_ENABLE_SUCCESS'] .= (isset($user->lang['GCSE_NOTICE']) ? sprintf($user->lang['GCSE_NOTICE'], $user->lang['ACP_CAT_GENERAL'], $user->lang['ACP_BOARD_SETTINGS'], $user->lang['ACP_CSE_TITLE']) : '');
+				$this->container->get('user')->add_lang_ext('forumhulp/gcse', 'info_acp_gcse');
+				$this->container->get('template')->assign_var('L_EXTENSION_ENABLE_SUCCESS', $this->container->get('user')->lang['EXTENSION_ENABLE_SUCCESS'] .
+				(isset($this->container->get('user')->lang['GCSE_NOTICE']) ?
+					sprintf($this->container->get('user')->lang['GCSE_NOTICE'],
+							$this->container->get('user')->lang['ACP_CAT_GENERAL'],
+							$this->container->get('user')->lang['ACP_BOARD_CONFIGURATION'],
+							$this->container->get('user')->lang['ACP_CSE_TITLE']) : ''));
 
 				// Run parent enable step method
 				return parent::enable_step($old_state);

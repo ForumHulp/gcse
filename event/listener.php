@@ -23,8 +23,8 @@ class listener implements EventSubscriberInterface
 	static public function getSubscribedEvents()
 	{
 		return array(
-			'core.page_header'				=> 'common_setup',
-			'core.acp_board_config_edit_add' => 'add_config',
+			'core.page_header'					=> 'common_setup',
+			'core.acp_board_config_edit_add'	=> 'add_config',
 		);
 	}
 

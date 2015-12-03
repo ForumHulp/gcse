@@ -8,10 +8,10 @@
 *
 */
 
-namespace forumhulp\gcse\migrations\v10x;
+namespace forumhulp\gcse\migrations\v31x;
 
 /**
- * Migration stage 2: Initial data
+ * Migration stage 1: Initial data
  */
 class m1_initial_config extends \phpbb\db\migration\migration
 {
@@ -24,7 +24,7 @@ class m1_initial_config extends \phpbb\db\migration\migration
 	 */
 	static public function depends_on()
 	{
-		return array('\phpbb\db\migration\data\v310\dev');
+		return array('\phpbb\db\migration\data\v310\gold');
 	}
 
 	/**

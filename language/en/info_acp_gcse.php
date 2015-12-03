@@ -47,5 +47,5 @@ $lang = array_merge($lang, array(
 	'CSE_Q'					=> 'Results',
 	'CSE_Q_EXPLAIN'			=> 'Results for pagination',
 
-	'GCSE_NOTICE'			=> '<div style="width:80%%;margin:20px auto;"><p style="text-align:left;">Config setting of this extension are in %1$s » %2$s » %3$s.</p></div>',
+	'GCSE_NOTICE'			=> '<div class="phpinfo"><p class="entry">Config setting of this extension are in %1$s » %2$s » %3$s.</p></div>',
 ));
